@@ -36,4 +36,20 @@ reverseString2(input:string){
 // Provider: It tells the injector how to create the object.--------->>>  providedIn: 'root'
  // (  Angular  have create single instance of service using  providedIn: 'root'
  // this single instance we can use through application)
+
+ // how Di work ?
+ // Di is design pattern. A class in component can take it's dependency from external sources rather than creating it self
+//  In Angular Dependency Injection is way to provide objects/instance(dependencies) to a class
+// In service @Injectable Decorator in that decorator ProvidedIn:root that mean Angular  have create single instance of service
+// and we can access that instance throughout in application
+/// using DI instance provided from external source in 3 way
+//1)Method
+//2)Interface
+//3)Constructor
+
+//we can register service in 3 way
+//1)using @injectable decorator
+//2)in app.module.ts--->> (property) -->>>providers:[] array
+//3)in particular component in @component decorator ( because we only need to this only particular component)
+//add ---->>> providers:[] in @Component({})
 }
