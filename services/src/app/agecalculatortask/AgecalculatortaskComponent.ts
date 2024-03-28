@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Ageservice3Service } from '../services/ageservice3.service';
 
+
 @Component({
   selector: 'app-agecalculatortask',
   templateUrl: './agecalculatortask.component.html',
@@ -20,10 +21,7 @@ export class AgecalculatortaskComponent implements OnInit {
     if (this.dateOfBirth) {
       this.age = this.ageCalculatorService.calculateAge(this.dateOfBirth);
     } else {
-      this.age=undefined as unknown as number;
-
-
-
+      this.age = null;
     }
   }
 }

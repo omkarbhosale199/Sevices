@@ -1,1 +1,9 @@
-<p>agecalculatortask works!</p>
+
+  <div>
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" [(ngModel)]="dateOfBirth" (change)="calculateAge()">
+  </div>
+  <div *ngIf="age !== null">
+    <p>Your age is {{ age }} years old.</p>
+  </div>
+
