@@ -1,0 +1,36 @@
+
+<p>service notes in commented in html file</p>
+<!--
+step 1 app.module.ts
+import httpClientModule in app.module.ts file
+HttpClientModule // not import automatically. its 3rd party go with manually import
+--- >> type manually
+import{HttpClientModule} from '@angular/common/http'
+
+step2 service.ts
+
+in service in constructor inject httpClient
+
+step 3 service.ts
+
+make http request
+
+ex-   getTodo() : Observable any> {
+  // making get call to web server(jsonplaceholder)
+return  this._httpClient.get('https://jsonplaceholder.typicode.com/users');
+}
+
+step 4 any component.ts
+
+call service by  constructor
+ex-
+constructor(private callService4:Service4Service)
+
+step 5 any component.ts
+
+subscribe to this
+
+ex-ngOnInit(): void {
+this.callService4.getTodo().subscribe(res => {
+  console.log(res);})}
+ -->
